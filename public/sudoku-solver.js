@@ -9,20 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let textBox = document.querySelector("#text-input");
 let cells = document.querySelectorAll(".sudoku-input");
-let errorBox = document.querySelector("#error-msg");
+let errorTextBox = document.querySelector("#error-msg");
 let solveButton = document.querySelector("#solve-button");
 let clearButton = document.querySelector("#clear-button");
 
 const numberOnlyRegex = /^[0-9.]*$/;
 
 let textBoxChanged = () => {
-  errorBox.innerText = "";
+  errorTextBox.innerText = "";
   if (numberOnlyRegex.test(textBox.value) === false) {
-    errorBox.innerText = "Error: Invalid Characters";
+    errorTextBox.innerText = "Error: Invalid Characters";
     return;
   }
   if (textBox.value.length != 81) {
-    errorBox.innerText = "Error: Expected puzzle to be 81 characters long.";
+    errorTextBox.innerText = "Error: Expected puzzle to be 81 characters long.";
     return;
   }
 
@@ -38,13 +38,13 @@ fucntion gridChanged() {
   cells.forEach((cell) => {
     textString += cell.value.toString();
   });
-  errorBox.innerText = "";
+  errorTextBox.innerText = "";
   if (numberOnlyRegex.test(textString) === false) {
-    errorBox.innerText = "Error: Invalid Characters";
+    errorTextBox.innerText = "Error: Invalid Characters";
     return;
   }
   if (textString.length != 81) {
-    errorBox.innerText = "Error: Expected puzzle to be 81 characters long.";
+    errorTextBox.innerText = "Error: Expected puzzle to be 81 characters long.";
     return;
   }
   textBox.value = textString;
@@ -134,9 +134,9 @@ function solveSodoku() {
 
   let solution = solveFromCell(originalBoard, 0, 0);
 
-  errorBox.innerText = "";
+  errorTextBox.innerText = "";
   if (solution === false) {
-    errorBox.innerText = "Sorry, No Solution.";
+    errorTextBox.innerText = "Sorry, No Solution.";
     return;
   }
 

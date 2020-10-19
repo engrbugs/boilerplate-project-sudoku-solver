@@ -33,7 +33,7 @@ let textBoxChanged = () => {
   });
 };
 
-fucntion gridChanged() {
+function gridChanged() {
   let textString = "";
   cells.forEach((cell) => {
     textString += cell.value.toString();

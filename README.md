@@ -1,4 +1,7 @@
-**freeCodeCamp** - Quality Assurance 4: Sudoku Solver
+# **freeCodeCamp** - Quality Assurance 4: Sudoku Solver
+
+## See this in action: [https://boilerplate-project-sudoku-solver-2.engrbugs.repl.co](https://boilerplate-project-sudoku-solver-2.engrbugs.repl.co)
+<br>
 ------
 
 [![Run on Repl.it](https://repl.it/badge/github/freeCodeCamp/boilerplate-project-sudoku-solver)](https://repl.it/github/freeCodeCamp/boilerplate-project-sudoku-solver)
